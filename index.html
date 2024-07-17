@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A brief description of your website or page content.">
+  <title>My Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="bg-white p-3 flex items-center w-full">
+    <!-- Adjust image source to a placeholder image -->
+    <img src="Desktop\tailwind1\img1.avif" alt="Logo" class="h-12 w-12 object-cover ml-2"> <!-- Placeholder image -->
+
+    <!-- Increase text size and spacing -->
+    <span class="ml-2 font-sans text-xl font-bold mr-12">ToDesktop</span> <!-- Adjust margin and text size -->
+    
+    <!-- Navigation links -->
+    <div class="hidden lg:flex space-x-8 ml-auto"> <!-- Show on medium screens and up -->
+      <a href="#" class="font-sans font-bold text-xl hover:text-blue-500">Pricing</a>
+      <a href="#" class="font-sans font-bold text-xl hover:text-blue-500">Docs</a>
+      <a href="#" class="font-sans font-bold text-xl hover:text-blue-500">Changelog</a>
+      <a href="#" class="font-sans font-bold text-xl hover:text-blue-500">Blog</a>
+      <a href="#" class="font-sans font-bold text-xl hover:text-blue-500">Login</a>
+    </div>
+
+    <!-- Button for additional content or menu on larger screens -->
+    <button class="hidden lg:block ml-auto border border-gray-600 px-6 py-2 rounded-lg font-bold hover:border-gray-900">
+      Electron Developers
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+    <!-- Mobile menu button -->
+    <button class="p-2 lg:hidden ml-auto" onclick="handleMenu()">
+      <i class="fa-solid fa-bars text-gray-800"></i>
+    </button>
+<div id="nav-dialog" class="fixed z-10 md:hidden bg-white insert-0 p-3">
+  <div class="flex justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <img class="object-cover max-w-12 max-h-12" src="C:\Users\Asus\Desktop\tailwind1\img1.avif">
+      <span class="text-lg font-medium font-display">ToDesktop</span>
+    </a>
+    <button class="p-2 md:hidden" onclick="handleMenu()">
+      <i class="fa-solid fa-xmark text-gray-600"></i>
+    </button>
+  </div>
+  <div class="mt-6 " >
+    <a href ="#" class="font-medium m-3 p-3 hover:bg-gray-400 block rounded-lg">Pricing</a>
+    <a href ="#" class="font-medium m-3 p-3 hover:bg-gray-400 block rounded-lg">Docs</a>
+    <a href ="#" class="font-medium m-3 p-3 hover:bg-gray-400 block rounded-lg">Changelog</a>
+    <a href ="#" class="font-medium m-3 p-3 hover:bg-gray-400 block rounded-lg">Blogs</a>
+    <a href ="#" class="font-medium m-3 p-3 hover:bg-gray-400 block rounded-lg">Login</a>
+  </div>
+  <div class="h-[1px] bg-gray-300"></div>
+  <button class=" flex w-full mt-6 ml-auto border  px-6 py-2 rounded-lg font-bold hover:border-gray-900 bg-gray-50">
+    Electron Developers
+    
+  </button>
+</div>
+    
+  </nav>
+
+  <!-- Include script file -->
+  <script src="script.js"></script>
+  <script>
+    function handleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
